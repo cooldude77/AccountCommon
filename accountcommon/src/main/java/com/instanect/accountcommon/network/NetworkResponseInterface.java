@@ -5,4 +5,9 @@ package com.instanect.accountcommon.network;
  */
 
 public interface NetworkResponseInterface<T> {
+
+    T getResponse();
+
+    void setResponse(T response);
+
 }
