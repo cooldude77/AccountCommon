@@ -1,4 +1,4 @@
-package com.instanect.accountcommon;
+package com.instanect.accountcommon.account.authorization;
 
 import java.util.HashMap;
 

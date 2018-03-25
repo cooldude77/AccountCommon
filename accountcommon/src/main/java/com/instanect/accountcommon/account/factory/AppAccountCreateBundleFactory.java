@@ -1,4 +1,4 @@
-package com.instanect.accountcommon;
+package com.instanect.accountcommon.account.factory;
 
 import android.os.Bundle;
 

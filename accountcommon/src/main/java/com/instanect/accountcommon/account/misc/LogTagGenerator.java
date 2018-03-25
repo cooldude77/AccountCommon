@@ -1,4 +1,4 @@
-package com.instanect.accountcommon;
+package com.instanect.accountcommon.account.misc;
 
 /**
  * Created by AKS on 6/5/2017.

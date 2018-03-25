@@ -1,4 +1,4 @@
-package com.instanect.accountcommon.account.account.interfaces;
+package com.instanect.accountcommon.account.account.interfaces.operations;
 
 /**
  * Created by AKS on 10/7/2017.

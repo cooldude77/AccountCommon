@@ -1,4 +1,4 @@
-package com.instanect.accountcommon.account.account.concrete;
+package com.instanect.accountcommon.account.account.operations;
 
 import android.Manifest;
 import android.accounts.Account;
@@ -13,14 +13,13 @@ import android.util.Log;
 
 import com.instanect.accountcommon.account.AccountDetailsDeclarationInterface;
 import com.instanect.accountcommon.account.AppAccountInterface;
-import com.instanect.accountcommon.account.account.interfaces.AccountQueryInterface;
+import com.instanect.accountcommon.account.account.interfaces.operations.AccountQueryInterface;
 
 /**
  * Created by AKS on 3/23/2018.
  */
 
 public class AccountQuery extends AsyncTask<Void, Void, Void> implements AccountQueryInterface {
-    private final AppAccountInterface appAccountInterface;
     private final AccountDetailsDeclarationInterface accountDetailsDeclarationInterface;
     private Account account;
     private Boolean otherErrorOccurred = false;
@@ -33,12 +32,10 @@ public class AccountQuery extends AsyncTask<Void, Void, Void> implements Account
 
     public AccountQuery(
             Context context,
-            AccountManager accountManager,
             AppAccountInterface appAccountInterface,
             AccountDetailsDeclarationInterface accountDetailsDeclarationInterface) {
         this.context = context;
         this.accountManager = accountManager;
-        this.appAccountInterface = appAccountInterface;
         this.accountDetailsDeclarationInterface = accountDetailsDeclarationInterface;
     }
 

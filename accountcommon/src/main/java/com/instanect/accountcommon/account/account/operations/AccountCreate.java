@@ -1,4 +1,4 @@
-package com.instanect.accountcommon.account.account.concrete;
+package com.instanect.accountcommon.account.account.operations;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -6,11 +6,11 @@ import android.content.ContentResolver;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.instanect.accountcommon.AppAccountCreateBundleFactory;
-import com.instanect.accountcommon.LogTagGenerator;
+import com.instanect.accountcommon.account.factory.AppAccountCreateBundleFactory;
+import com.instanect.accountcommon.account.misc.LogTagGenerator;
 import com.instanect.accountcommon.account.AccountDetailsDeclarationInterface;
-import com.instanect.accountcommon.account.AppAccountCreateFactory;
-import com.instanect.accountcommon.account.account.interfaces.AccountCreateInterface;
+import com.instanect.accountcommon.account.factory.AppAccountCreateFactory;
+import com.instanect.accountcommon.account.account.interfaces.operations.AccountCreateInterface;
 
 /**
  * Class to create account

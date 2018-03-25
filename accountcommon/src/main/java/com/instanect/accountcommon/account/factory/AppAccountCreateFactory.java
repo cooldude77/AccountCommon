@@ -1,4 +1,4 @@
-package com.instanect.accountcommon.account;
+package com.instanect.accountcommon.account.factory;
 
 import android.accounts.Account;
 
