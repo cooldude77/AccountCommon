@@ -12,7 +12,6 @@ import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
 import com.instanect.accountcommon.account.AccountDetailsDeclarationInterface;
-import com.instanect.accountcommon.account.AppAccountInterface;
 import com.instanect.accountcommon.account.account.interfaces.operations.AccountQueryInterface;
 
 /**
@@ -32,7 +31,7 @@ public class AccountQuery extends AsyncTask<Void, Void, Void> implements Account
 
     public AccountQuery(
             Context context,
-            AppAccountInterface appAccountInterface,
+            AccountManager accountManager,
             AccountDetailsDeclarationInterface accountDetailsDeclarationInterface) {
         this.context = context;
         this.accountManager = accountManager;
