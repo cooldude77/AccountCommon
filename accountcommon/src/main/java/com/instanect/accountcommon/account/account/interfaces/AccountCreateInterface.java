@@ -5,6 +5,6 @@ package com.instanect.accountcommon.account.account.interfaces;
  */
 
 public interface AccountCreateInterface {
-    void createAccount(String email, String token, String username) throws Exception;
+    void createAccount(String email, String token, String username,String appAuthority) throws Exception;
 
 }
