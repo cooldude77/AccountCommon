@@ -19,4 +19,9 @@ public class AndroidProviderModule {
     BundleProvider provideBundleProvider() {
         return new BundleProvider();
     }
+
+    @Provides
+    TypeTokenProvider provideTypeTokenProvider() {
+        return new TypeTokenProvider();
+    }
 }

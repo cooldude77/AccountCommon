@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 9
-        versionName "0.0.9"
+        versionCode 11
+        versionName "0.0.11"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -34,7 +34,7 @@ ext {
     siteUrl = 'https://github.com/cooldude77/AccountCommon'
     gitUrl = 'https://github.com/cooldude77/AccountCommon.git'
 
-    libraryVersion = '0.0.9'
+    libraryVersion = '0.0.11'
 
     developerId = 'cooldude77'
     developerName = 'Ashvini'
