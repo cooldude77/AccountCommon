@@ -3,9 +3,6 @@
 buildscript {
     
     repositories {
-        maven{
-            url 'https://dl.bintray.com/cooldude77/androidproviders'
-        }
         google()
         jcenter()
 
@@ -23,9 +20,6 @@ buildscript {
 
 allprojects {
     repositories {
-        maven{
-            url 'https://dl.bintray.com/cooldude77/androidproviders'
-        }
         google()
         jcenter()
     }
