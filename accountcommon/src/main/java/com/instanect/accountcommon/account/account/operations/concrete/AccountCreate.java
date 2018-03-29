@@ -1,4 +1,4 @@
-package com.instanect.accountcommon.account.account.operations;
+package com.instanect.accountcommon.account.account.operations.concrete;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -6,11 +6,12 @@ import android.content.ContentResolver;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.instanect.accountcommon.account.factory.AppAccountCreateBundleFactory;
-import com.instanect.accountcommon.account.misc.LogTagGenerator;
 import com.instanect.accountcommon.account.AccountDetailsDeclarationInterface;
+import com.instanect.accountcommon.account.account.operations.interfaces.AccountCreateInterface;
+import com.instanect.accountcommon.account.account.operations.interfaces.response.AccountCreateResponseInterface;
+import com.instanect.accountcommon.account.factory.AppAccountCreateBundleFactory;
 import com.instanect.accountcommon.account.factory.AppAccountCreateFactory;
-import com.instanect.accountcommon.account.account.interfaces.operations.AccountCreateInterface;
+import com.instanect.accountcommon.account.misc.LogTagGenerator;
 
 /**
  * Class to create account
@@ -23,6 +24,7 @@ public class AccountCreate implements AccountCreateInterface {
     private final AppAccountCreateFactory appAccountCreateFactory;
     private final AppAccountCreateBundleFactory appAccountCreateBundleFactory;
     private final AccountDetailsDeclarationInterface accountDetailsDeclarationInterface;
+    private AccountCreateResponseInterface accountInteractorInterface;
 
     public AccountCreate(
             AccountManager accountManager,
@@ -65,5 +67,11 @@ public class AccountCreate implements AccountCreateInterface {
         Log.d(TAG, "Account set to automatically sync");
         Log.d(TAG, "Periodic sync added");
 
+    }
+
+    @Override
+    public void setAccountCreateResponseInterface(AccountCreateResponseInterface accountInteractorInterface) {
+
+        this.accountInteractorInterface = accountInteractorInterface;
     }
 }

@@ -4,8 +4,8 @@ import android.accounts.AccountManager;
 import android.content.Context;
 
 import com.instanect.accountcommon.account.AccountDetailsDeclarationInterface;
-import com.instanect.accountcommon.account.account.operations.AccountCreate;
-import com.instanect.accountcommon.account.account.operations.AccountQuery;
+import com.instanect.accountcommon.account.account.operations.concrete.AccountCreate;
+import com.instanect.accountcommon.account.account.operations.concrete.AccountQuery;
 import com.instanect.accountcommon.account.factory.AppAccountCreateBundleFactory;
 import com.instanect.accountcommon.account.factory.AppAccountCreateFactory;
 

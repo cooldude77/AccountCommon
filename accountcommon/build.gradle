@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 11
-        versionName "0.0.11"
+        versionCode 12
+        versionName "0.0.12"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -34,7 +34,7 @@ ext {
     siteUrl = 'https://github.com/cooldude77/AccountCommon'
     gitUrl = 'https://github.com/cooldude77/AccountCommon.git'
 
-    libraryVersion = '0.0.11'
+    libraryVersion = '0.0.12'
 
     developerId = 'cooldude77'
     developerName = 'Ashvini'
@@ -49,6 +49,8 @@ ext {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.code.gson:gson:2.8.1'
+
     // Dagger
     implementation 'com.google.dagger:dagger:2.12'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.12'
