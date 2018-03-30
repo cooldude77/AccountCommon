@@ -20,17 +20,19 @@ public class AccountCommonModule {
 
     private final Context context;
     private final AccountManager accountManager;
+    private final AccountDetailsDeclarationInterface accountDetailsDeclarationInterface;
 
-    public AccountCommonModule(Context context) {
+    public AccountCommonModule(Context context, AccountDetailsDeclarationInterface accountDetailsDeclarationInterface) {
 
         this.context = context;
 
         accountManager = (AccountManager) context.getSystemService(Context.ACCOUNT_SERVICE);
 
+        this.accountDetailsDeclarationInterface = accountDetailsDeclarationInterface;
     }
 
     @Provides
-    AccountCreate provideAccountCreate(AccountDetailsDeclarationInterface accountDetailsDeclarationInterface) {
+    AccountCreate provideAccountCreate() {
         return new AccountCreate(
                 accountManager,
                 new AppAccountCreateFactory(),
@@ -40,7 +42,7 @@ public class AccountCommonModule {
     }
 
     @Provides
-    AccountQuery provideAccountQuery(AccountDetailsDeclarationInterface accountDetailsDeclarationInterface) {
+    AccountQuery provideAccountQuery() {
         return new AccountQuery(
                 context,
                 accountManager,

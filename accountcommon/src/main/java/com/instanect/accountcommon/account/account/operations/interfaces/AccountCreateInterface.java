@@ -7,7 +7,7 @@ import com.instanect.accountcommon.account.account.operations.interfaces.respons
  */
 
 public interface AccountCreateInterface {
-    void createAccount(String email, String token, String username,String appAuthority) throws Exception;
+    void createAccount(String email, String token, String username) throws Exception;
 
     void setAccountCreateResponseInterface(AccountCreateResponseInterface accountInteractorInterface);
 

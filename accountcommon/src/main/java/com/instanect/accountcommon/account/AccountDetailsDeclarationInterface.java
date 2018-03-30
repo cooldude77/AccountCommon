@@ -10,4 +10,6 @@ public interface AccountDetailsDeclarationInterface {
     String getAuthTokenType();
 
     String getUsernameString();
+
+    String getAppAuthority();
 }

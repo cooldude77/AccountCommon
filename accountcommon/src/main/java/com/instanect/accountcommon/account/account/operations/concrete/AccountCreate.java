@@ -43,22 +43,23 @@ public class AccountCreate implements AccountCreateInterface {
     public void createAccount(
             String email,
             String token,
-            String username,
-            String appAuthority
+            String username
     ) throws Exception {
 
         Account account = appAccountCreateFactory.getAccount(email,
                 accountDetailsDeclarationInterface.getAccountType());
         Bundle bundle = appAccountCreateBundleFactory.getBundle("username", username);
 
-        ContentResolver.setIsSyncable(account, appAuthority, 1);
-        ContentResolver.setSyncAutomatically(account, appAuthority, true);
+        ContentResolver.setIsSyncable(account,
+                accountDetailsDeclarationInterface.getAppAuthority(), 1);
+        ContentResolver.setSyncAutomatically(account, accountDetailsDeclarationInterface.getAppAuthority(), true);
 
-        ContentResolver.addPeriodicSync(account, appAuthority, bundle, 60 * 60 * 24);
+        ContentResolver.addPeriodicSync(account, accountDetailsDeclarationInterface.getAppAuthority(), bundle, 60 * 60 * 24);
         // add this account
         accountManager.addAccountExplicitly(account, null, bundle);
         // set authToken received from server
-        accountManager.setAuthToken(account, accountDetailsDeclarationInterface.getAuthTokenType(), token);
+        accountManager.setAuthToken(account,
+                accountDetailsDeclarationInterface.getAuthTokenType(), token);
 
         Log.d(TAG, "New Account Added");
         Log.d(TAG, "Account Name : " + account.name);
