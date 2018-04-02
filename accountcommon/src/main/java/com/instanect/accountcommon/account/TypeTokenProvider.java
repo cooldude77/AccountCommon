@@ -10,7 +10,8 @@ import java.util.ArrayList;
  */
 
 public class TypeTokenProvider {
-    public Type getArrayListStringType() {
-        return new TypeToken<ArrayList<String>>() {}.getType();
+    public static Type getArrayListStringType() {
+        return new TypeToken<ArrayList<String>>() {
+        }.getType();
     }
 }
