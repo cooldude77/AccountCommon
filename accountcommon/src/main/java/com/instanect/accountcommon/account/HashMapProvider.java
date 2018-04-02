@@ -10,10 +10,10 @@ public class HashMapProvider implements HashMapInterface {
 
     @Override
     public HashMap<String, String> getHashMap() {
-        return new HashMap<String, String>();
+        return HashMapProvider.getHashMap(String.class, String.class);
     }
 
-    public <T, K> HashMap<T, K> getHashMap(Class<T> tClass, Class<K> kClass) {
+    public static <T, K> HashMap<T, K> getHashMap(Class<T> tClass, Class<K> kClass) {
         return new HashMap<T, K>();
     }
 }
