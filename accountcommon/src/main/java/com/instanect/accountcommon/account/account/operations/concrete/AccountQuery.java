@@ -8,8 +8,9 @@ import android.accounts.OperationCanceledException;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+
+import androidx.core.app.ActivityCompat;
 
 import com.instanect.accountcommon.account.AccountDetailsDeclarationInterface;
 import com.instanect.accountcommon.account.account.operations.interfaces.AccountQueryInterface;
