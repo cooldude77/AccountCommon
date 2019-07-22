@@ -6,8 +6,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 16
-        versionName "0.1.0-alpha-01"
+        versionCode 17
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
@@ -34,7 +34,7 @@ ext {
     siteUrl = 'https://github.com/cooldude77/AccountCommon'
     gitUrl = 'https://github.com/cooldude77/AccountCommon.git'
 
-    libraryVersion = '0.1.0-alpha-01'
+    libraryVersion = '1.0.0'
 
     developerId = 'cooldude77'
     developerName = 'Ashvini'
@@ -49,13 +49,13 @@ ext {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
 
     // Dagger
-    implementation 'com.google.dagger:dagger:2.18'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.18'
+    implementation 'com.google.dagger:dagger:2.23'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.23'
     implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
