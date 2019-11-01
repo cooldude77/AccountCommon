@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 17
-        versionName "1.0.0"
+        targetSdkVersion 29
+        versionCode 18
+        versionName "1.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
     }
@@ -34,7 +34,7 @@ ext {
     siteUrl = 'https://github.com/cooldude77/AccountCommon'
     gitUrl = 'https://github.com/cooldude77/AccountCommon.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'cooldude77'
     developerName = 'Ashvini'
@@ -54,7 +54,7 @@ dependencies {
     // Dagger
     implementation 'com.google.dagger:dagger:2.23'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.23'
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
